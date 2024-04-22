@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Staatliches&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --staat-font: "Staatliches", sans-serif;
+    --manrope-font: "Manrope", sans-serif;
+    --fondo-degradado: linear-gradient(180deg, lightblue 0%, black 100%);
+    --negro90: rgb(33, 33, 33);
+}
+
+.staatliches-regular {
+    font-family: var(--staat-font);
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: var(--fondo-degradado);
+    display: grid;
+    place-items: center;
+
+}
+.sombra{ box-shadow: 20 20 15px 20 rgba(0, 0, 0, 0.39);}
+
+
+.tarjeta {
+    height: 550px;
+    width: 300px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: azure;
+    
+    & .encabezado{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }  
+    & .producto{
+        height: 240px;
+        width: 100%;
+    } 
+    & .desc_prod{
+        height: 200px;
+        width: 100%;
+        text-align: center;
+    } 
+    & .botonera{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+   
+}
+
+.imagen {
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    background-image: url('/images/hoodie.jpeg');
+    transition: background-size 0.3s ease;
+}
+.imagen:hover {
+    transform: scale(1.5);
+    transform-origin: center center;
+}
+
+
+.button-cart {
+    background-color: #28a745; 
+    width: 80px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button-cart:hover{
+    background-color: #0056b3;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    filter: brightness(0.9);
+}
+
+
+
+.talles{
+    
+    width: 60%;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .t1 {
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        border: solid 1px black ;
+        border-radius: 50%;
+        line-height: 30px;
+        font-weight: bolder;
+    }
+}
+
+.t1:hover{
+    background-color: #999;
+}
+
+
+
+/*BOX-SHADOW : X Y BLUR Z COLOR         SOMBRA EXTERIOR*/
+    /*BOX-SHADOW : INSET X Y BLUR Z COLOR   SOMBRA INTERIOR*/
